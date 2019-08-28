@@ -94,6 +94,7 @@
             "Atbash Cipher",
             "Substitute",
             "Derive PBKDF2 key",
+            "Argon2",
             "Derive EVP key",
             "Bcrypt",
             "Scrypt",

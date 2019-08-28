@@ -53,10 +53,11 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            jquery: "jquery/src/jquery",
+            jquery: "jquery/src/jquery"
         },
     },
     module: {
+        noParse: /\.wasm$/,
         rules: [
             {
                 test: /\.m?js$/,
@@ -68,6 +69,11 @@ module.exports = {
                 },
                 type: "javascript/auto",
                 loader: "babel-loader"
+            },
+            {
+                test: /\.wasm$/,
+                type: "javascript/auto",
+                loaders: ["base64-loader"]
             },
             {
                 test: /forge.min.js$/,
